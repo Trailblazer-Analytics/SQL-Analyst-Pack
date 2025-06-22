@@ -1,0 +1,76 @@
+name: 🔍 SQL Scripts Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate-sql:
+    runs-on: ubuntu-latest
+    name: Validate SQL Scripts
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🔍 Find SQL files
+      id: find-sql
+      run: |
+        echo "Found SQL files:"
+        find . -name "*.sql" -not -path "./_archive/*" | head -10
+        echo "Total SQL files: $(find . -name '*.sql' -not -path './_archive/*' | wc -l)"
+        
+    - name: ✅ Check SQL file headers
+      run: |
+        echo "Checking SQL file headers for required metadata..."
+        missing_headers=0
+        for file in $(find . -name "*.sql" -not -path "./_archive/*" -not -path "./sample-database/*"); do
+          if ! grep -q "File.*:" "$file" || ! grep -q "Topic.*:" "$file" || ! grep -q "Purpose.*:" "$file"; then
+            echo "❌ Missing header in: $file"
+            missing_headers=$((missing_headers + 1))
+          fi
+        done
+        if [ $missing_headers -eq 0 ]; then
+          echo "✅ All SQL files have proper headers"
+        else
+          echo "❌ $missing_headers files missing proper headers"
+          exit 1
+        fi
+        
+    - name: 📋 Generate file inventory
+      run: |
+        echo "## 📊 Repository Inventory" > inventory.md
+        echo "" >> inventory.md
+        echo "| Category | Scripts | Topics Covered |" >> inventory.md
+        echo "|----------|---------|----------------|" >> inventory.md
+        
+        for dir in $(find . -maxdepth 1 -type d -name "[0-9]*" | sort); do
+          category=$(basename "$dir")
+          script_count=$(find "$dir" -name "*.sql" | wc -l)
+          topics=$(find "$dir" -name "*.sql" -exec basename {} .sql \; | head -3 | tr '\n' ', ' | sed 's/, $//')
+          echo "| $category | $script_count | $topics... |" >> inventory.md
+        done
+        
+        echo "" >> inventory.md
+        echo "**Total Scripts:** $(find . -name '*.sql' -not -path './_archive/*' -not -path './sample-database/*' | wc -l)" >> inventory.md
+        echo "**Coverage:** 14 major SQL topic areas" >> inventory.md
+        
+        cat inventory.md
+        
+    - name: 📝 Check README files
+      run: |
+        echo "Checking for README files in each category..."
+        missing_readmes=0
+        for dir in $(find . -maxdepth 1 -type d -name "[0-9]*" | sort); do
+          if [ ! -f "$dir/README.md" ]; then
+            echo "❌ Missing README.md in: $dir"
+            missing_readmes=$((missing_readmes + 1))
+          fi
+        done
+        if [ $missing_readmes -eq 0 ]; then
+          echo "✅ All directories have README files"
+        else
+          echo "❌ $missing_readmes directories missing README files"
+        fi

@@ -1,0 +1,66 @@
+name: "🐛 Bug Report"
+description: "Report a bug in SQL scripts or documentation"
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! 🐛
+        
+  - type: input
+    id: script-name
+    attributes:
+      label: "Script Name"
+      description: "Which SQL script has the issue?"
+      placeholder: "e.g., 01_basic-queries/01_filtering_and_selection.sql"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: sql-dialect
+    attributes:
+      label: "SQL Dialect"
+      description: "Which database system are you using?"
+      options:
+        - PostgreSQL
+        - MySQL
+        - SQL Server
+        - Oracle
+        - SQLite
+        - BigQuery
+        - Snowflake
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description"
+      description: "What's the issue you're experiencing?"
+      placeholder: "Describe the problem clearly..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected Behavior"
+      description: "What should happen instead?"
+      placeholder: "Describe what you expected to happen..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: error-message
+    attributes:
+      label: "Error Message"
+      description: "If applicable, paste any error messages"
+      render: text
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Any other relevant information"

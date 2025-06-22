@@ -1,0 +1,55 @@
+name: "✨ Feature Request"
+description: "Suggest a new SQL topic or improvement"
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Got an idea to make SQL Analyst Pack even better? We'd love to hear it! ✨
+        
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: "Feature Type"
+      description: "What kind of addition is this?"
+      options:
+        - New SQL script/topic
+        - Documentation improvement
+        - New dataset example
+        - Performance optimization
+        - Tool integration
+        - Other
+    validations:
+      required: true
+      
+  - type: input
+    id: suggested-location
+    attributes:
+      label: "Suggested Location"
+      description: "Which folder should this go in?"
+      placeholder: "e.g., 15_machine-learning or improve 05_window-functions"
+      
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: "Feature Description"
+      description: "Describe your idea in detail"
+      placeholder: "What would you like to see added or improved?"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: use-case
+    attributes:
+      label: "Use Case"
+      description: "How would this benefit SQL learners?"
+      placeholder: "Explain the practical application..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Links, references, or examples that might help"
