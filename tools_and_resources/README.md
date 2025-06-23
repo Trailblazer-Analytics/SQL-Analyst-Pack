@@ -8,14 +8,15 @@ This directory contains ready-to-use SQL snippets, templates, and reference mate
 ## 📁 What's Included
 
 ### 📝 **SQL Snippets and Templates**
-- **01_common_sql_snippets.sql** - Master collection of frequently used patterns
-- **snippet_1_top_n_records.sql** - Find top N records per group (rankings, leaderboards)
-- **snippet_2_running_totals.sql** - Calculate running totals and cumulative metrics
-- **snippet_3_pivot_data.sql** - Transform rows to columns for reporting
-- **snippet_4_first_last_event.sql** - Analyze first/last events (customer journeys)
-- **snippet_5_date_series.sql** - Generate date ranges and time series
-- **snippet_6_session_data.sql** - Analyze user sessions and behavior
-- **snippet_7_customer_lifetime_value.sql** - Calculate customer value metrics
+
+- **01_common_sql_snippets.sql** - Comprehensive collection of 7 essential SQL patterns:
+  1. **Top N Records Per Group** - Rankings and leaderboards
+  2. **Running Totals** - Cumulative calculations and moving averages
+  3. **Pivot Data** - Transform rows to columns for reporting
+  4. **First/Last Events** - Customer journey and lifecycle analysis
+  5. **Date Series** - Generate complete time ranges and calendars
+  6. **Session Analytics** - User behavior and engagement patterns
+  7. **Customer Lifetime Value** - Comprehensive customer value metrics
 
 ### 🎯 **Business Use Cases**
 Each snippet is designed for common business analysis scenarios:
@@ -28,10 +29,19 @@ Each snippet is designed for common business analysis scenarios:
 ## � Quick Start
 
 ### Using SQL Snippets
-1. Browse the snippet files to find relevant patterns
-2. Copy the code that matches your use case
-3. Adapt table and column names to your schema
-4. Test the query in your environment
+
+1. Open the `01_common_sql_snippets.sql` file
+2. Browse the 7 comprehensive patterns with business context
+3. Copy the relevant snippet that matches your use case
+4. Adapt table and column names to your schema
+5. Test the query in your environment
+
+Each snippet includes:
+- **Business use case** explanation
+- **Technical approach** and methodology  
+- **Real example** with sample data
+- **Adaptation notes** for different databases
+- **Practical applications** for various industries
 
 ### Query Templates
 ```sql
