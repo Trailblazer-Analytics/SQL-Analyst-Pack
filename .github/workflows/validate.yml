@@ -26,7 +26,7 @@ jobs:
       run: |
         echo "Checking SQL file headers for required metadata..."
         missing_headers=0
-        for file in $(find . -name "*.sql" -not -path "./_archive/*" -not -path "./sample-database/*"); do
+        for file in $(find . -name "*.sql" -not -path "./_archive/*" -not -path "./sample_database/*"); do
           if ! grep -q "File.*:" "$file" || ! grep -q "Topic.*:" "$file" || ! grep -q "Purpose.*:" "$file"; then
             echo "❌ Missing header in: $file"
             missing_headers=$((missing_headers + 1))
@@ -54,7 +54,7 @@ jobs:
         done
         
         echo "" >> inventory.md
-        echo "**Total Scripts:** $(find . -name '*.sql' -not -path './_archive/*' -not -path './sample-database/*' | wc -l)" >> inventory.md
+        echo "**Total Scripts:** $(find . -name '*.sql' -not -path './_archive/*' -not -path './sample_database/*' | wc -l)" >> inventory.md
         echo "**Coverage:** 14 major SQL topic areas" >> inventory.md
         
         cat inventory.md

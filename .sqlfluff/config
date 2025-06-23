@@ -1,0 +1,193 @@
+[sqlfluff]
+# SQL dialect - can be overridden per file/project
+dialect = postgres
+
+# Template engine - for dynamic SQL
+templater = jinja
+
+# Core rules configuration
+exclude_rules = L003,L013,L016,L034
+
+# Rule-specific configuration
+[sqlfluff:rules]
+# L001: Tab vs spaces
+tab_space_size = 4
+
+# L002: Mixed tabs and spaces  
+indent_unit = space
+
+# L003: Indentation length (disabled above)
+# hanging_indents = True
+
+# L006: Operators positioning
+operator_new_lines = after
+
+# L007: Operators positioning
+allow_scalar = True
+
+# L008: Commas positioning  
+trailing_comma = True
+
+# L009: Files must end with newline
+# (enabled by default)
+
+# L010: Keywords should be consistently upper/lowercase
+capitalisation_policy = upper
+
+# L011: Implicit aliasing
+aliasing = explicit
+
+# L012: Order of columns in SELECT
+# (enabled by default, but can be configured)
+
+# L014: Unquoted identifiers
+unquoted_identifiers_policy = all
+
+# L015: DISTINCT position
+# (enabled by default)
+
+# L019: Leading/trailing comma
+comma_style = trailing
+
+# L022: Blank lines
+blank_lines_trailing_table_reference = 0
+
+# L025: Table aliases
+table_aliases = True
+
+# L026: References
+references_strategy = consistent
+
+# L027: Qualified references
+force_enable = False
+
+# L028: References consistency
+reference_matching = True
+
+# L029: Keywords should not be used as identifiers
+quoted_identifiers_policy = none
+
+# L030: Function names
+capitalisation_policy = upper
+
+# L031: Avoid table aliases in FROM/JOIN
+# (can be configured based on preference)
+
+# L032: Prefer specifying join type
+# (enabled by default)
+
+# L033: UNION vs UNION ALL
+# (enabled by default)
+
+# L036: SELECT targets
+wildcard_policy = single
+
+# L037: ORDER BY columns
+order_by_columns_extend_rule = True
+
+# L038: Trailing semicolons
+# (enabled by default)
+
+# L039: Unnecessary quotes
+# (enabled by default)
+
+# L040: Null comparison
+# (enabled by default)
+
+# L041: Distinct over count
+# (enabled by default)
+
+# L042: Join condition order
+# (enabled by default)
+
+# L043: Case sensitivity
+# (enabled by default)
+
+# L044: Query produces unknown number of result columns
+# (enabled by default)
+
+# L045: Query defines a CTE but does not use it
+# (enabled by default)
+
+# L046: Unnecessary DISTINCT
+# (enabled by default)
+
+# L047: Use consistent syntax to express "count number of rows"
+# (enabled by default)
+
+# L048: Quoted literals
+quoted_literals_policy = consistent
+
+[sqlfluff:rules:L010]
+# Keywords
+capitalisation_policy = upper
+
+[sqlfluff:rules:L011]
+# Aliasing
+aliasing = explicit
+
+[sqlfluff:rules:L012]
+# Order of columns
+# No specific config needed
+
+[sqlfluff:rules:L014]
+# Unquoted identifiers
+extended_capitalisation_policy = lower
+unquoted_identifiers_policy = lower
+
+[sqlfluff:rules:L016]
+# Line length (disabled above for analyst queries)
+max_line_length = 120
+
+[sqlfluff:rules:L019]
+# Comma style
+comma_style = trailing
+
+[sqlfluff:rules:L022]
+# Blank lines
+blank_lines_trailing_table_reference = 0
+
+[sqlfluff:rules:L026]
+# References
+force_enable = False
+
+[sqlfluff:rules:L028]
+# Reference consistency
+single_table_references = consistent
+
+[sqlfluff:rules:L029]
+# Keywords as identifiers
+quoted_identifiers_policy = none
+
+[sqlfluff:rules:L030]
+# Function names
+extended_capitalisation_policy = upper
+
+[sqlfluff:rules:L036]
+# Wildcard policy
+wildcard_policy = single
+
+[sqlfluff:rules:L040]
+# Null comparison
+# No specific config needed
+
+[sqlfluff:rules:L042]
+# Join condition order
+# No specific config needed
+
+[sqlfluff:rules:L044]
+# Query produces unknown columns
+# No specific config needed
+
+[sqlfluff:rules:L045]
+# Unused CTEs
+# No specific config needed
+
+[sqlfluff:rules:L047]
+# Count consistency
+prefer_count_1 = True
+
+[sqlfluff:rules:L048]
+# Quoted literals
+quoted_literals_policy = consistent
+prefer_quoted_literals = False

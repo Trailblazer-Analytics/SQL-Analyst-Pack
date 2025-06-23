@@ -22,7 +22,7 @@ Every `.sql` file must begin with this header, fully filled out:
     File        : {{PATH_FROM_REPO_ROOT}}
     Topic       : {{FOLDER_NAME_READABLE}}
     Purpose     : {{One-sentence description of what the script demonstrates}}
-    Author      : {{Your Name}}
+    Author      : Alexander Nykolaiszyn
     Created     : {{yyyy-mm-dd}}
     Updated     : {{yyyy-mm-dd}}
     SQL Flavors : ✅ PostgreSQL | ✅ MySQL | ⛔ SQL Server | ⚠️ Oracle | ✅ SQLite | ⚠️ BigQuery | ✅ Snowflake

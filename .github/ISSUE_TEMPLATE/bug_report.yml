@@ -13,7 +13,7 @@ body:
     attributes:
       label: "Script Name"
       description: "Which SQL script has the issue?"
-      placeholder: "e.g., 01_basic-queries/01_filtering_and_selection.sql"
+      placeholder: "e.g., 01_foundations/01_basic_queries/01_filtering_and_selection.sql"
     validations:
       required: true
       

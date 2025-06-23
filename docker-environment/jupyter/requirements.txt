@@ -1,0 +1,48 @@
+# Core data analysis packages
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+scipy>=1.10.0
+scikit-learn>=1.3.0
+
+# Database connectivity
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0
+pymysql>=1.0.0
+clickhouse-driver>=0.2.0
+redis>=4.5.0
+
+# Jupyter SQL integration
+ipython-sql>=0.5.0
+sqlparse>=0.4.0
+jupyterlab-sql>=3.0.0
+
+# Excel and file handling
+openpyxl>=3.1.0
+xlswriter>=3.1.0
+xlrd>=2.0.0
+
+# Data visualization extensions
+jupyter-dash>=0.4.0
+ipywidgets>=8.0.0
+
+# Development and debugging
+jupyterlab>=4.0.0
+notebook>=7.0.0
+ipykernel>=6.22.0
+
+# Statistical and time series analysis
+statsmodels>=0.14.0
+prophet>=1.1.0
+holidays>=0.29.0
+
+# Web scraping and APIs (for data collection)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Configuration and utilities
+python-dotenv>=1.0.0
+configparser
+logging

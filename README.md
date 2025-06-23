@@ -1,23 +1,51 @@
-# 📊 SQL Analyst Pack v2.0: The Complete Learning Path
+# 📊 SQL Analyst Pack: The Complete Learning Path
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![SQL](https://img.shields.io/badge/SQL-Multi--Dialect-blue.svg)](https://en.wikipedia.org/wiki/SQL)
 [![VS Code](https://img.shields.io/badge/VS%20Code-Ready-brightgreen.svg)](https://code.visualstudio.com/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-> **A comprehensive, step-by-step learning path and reference library for data analysts mastering SQL.**
+> **A comprehensive, progressive learning path from SQL basics to advanced analytics mastery.**
 
-This repository is designed to take you from basic queries to advanced analytics in a structured, easy-to-follow format. Whether you're a beginner or looking to sharpen your skills, these practical examples will help you become proficient in SQL analysis.
+Transform your data analysis skills with this structured, hands-on learning resource. Our 4-tier educational progression takes you from beginner to expert through practical examples, real-world projects, and industry scenarios.
 
-## 🎯 **Who This Is For**
+## 🎯 Who This Is For
 
-- **Data Analysts** starting their SQL journey
-- **Business Intelligence professionals** looking to improve their skills  
-- **Students** learning database concepts
-- **Experienced analysts** seeking a comprehensive reference library
-- **Teams** wanting standardized SQL practices
+- **Complete Beginners** - Start from zero with comprehensive foundations
+- **Data Analysts** - Advance your SQL skills with intermediate techniques  
+- **Business Intelligence Professionals** - Master advanced analytics and optimization
+- **Students & Educators** - Use as curriculum for data science programs
+- **Development Teams** - Establish SQL best practices and standards
 
-## 🚀 **Quick Start**
+## 🗺️ Learning Path Overview
+
+Our educational progression is designed for maximum learning effectiveness:
+
+### 📚 [00_getting_started](./00_getting_started/) - Your Journey Begins
+**Time:** 1-2 hours | **Level:** Anyone  
+Set up your environment and understand the learning path ahead.
+
+### 📖 [01_foundations](./01_foundations/) - Core SQL Mastery  
+**Time:** 4 weeks | **Level:** Beginner  
+Master fundamental SQL concepts, data profiling, and cleaning techniques.
+
+### 📊 [02_intermediate](./02_intermediate/) - Analytical Techniques
+**Time:** 6 weeks | **Level:** Intermediate  
+Learn aggregation, window functions, time-series analysis, and text processing.
+
+### 🚀 [03_advanced](./03_advanced/) - Expert-Level Skills
+**Time:** 8 weeks | **Level:** Advanced  
+Performance tuning, database administration, advanced analytics, and cloud platforms.
+
+### 🔧 [04_real_world](./04_real_world/) - Practical Applications  
+**Time:** Ongoing | **Level:** Professional  
+Industry scenarios, integration examples, case studies, and best practices.
+
+### 🐍 [05_python_integration](./05_python_integration/) - Modern Analytics Stack
+**Time:** 4 weeks | **Level:** Intermediate to Advanced  
+Combine SQL with Python for data analysis, visualization, automation, and machine learning.
+
+## 🚀 Quick Start
 
 1. **📥 Clone this repository**
 
@@ -28,43 +56,79 @@ This repository is designed to take you from basic queries to advanced analytics
 
 2. **⚙️ Follow the [Setup Guide](./SETUP.md)** to configure your environment
 
-3. **📚 Start with [01_basic-queries](./01_basic-queries/)** and progress through the learning path
+3. **📚 Start with [Getting Started](./00_getting_started/)** and progress through the learning path
+
+4. **Contribute back** improvements and new solutions
+
+## 📚 **Learning Resources**
+
+- [Getting Started Guide](./00_getting_started/README.md) – Essential setup and learning path orientation
+- [Foundations](./01_foundations/README.md) – Core SQL concepts and data manipulation  
+- [Intermediate](./02_intermediate/README.md) – Analytical techniques and advanced queries
+- [Advanced](./03_advanced/README.md) – Performance optimization and complex analytics
+- [Real World](./04_real_world/README.md) – Practical applications and industry scenarios
+- [Python Integration](./05_python_integration/README.md) – Modern analytics with Python and SQL workflows
+- [Exercise Framework](./exercises/README.md) – Comprehensive hands-on challenges and projects
+- [Tools & Resources](./tools_and_resources/README.md) – Utilities, snippets, and reference materials
+- [Sample Database](./sample_database/README.md) – Complete datasets for hands-on practice
 
 ## 🗺️ Learning Path Roadmap
 
-This repository is organized as a sequential learning path. Each folder builds upon the concepts of the previous one, providing a clear progression of skills.
+This repository is organized as a sequential learning path. Each module builds upon the concepts of the previous one, providing a clear progression of skills.
 
-1. **01_basic-queries**: Master the fundamentals of `SELECT`, `WHERE`, `JOINs`, and `CTEs`.
-2. **02_data-profiling**: Learn how to explore and understand new datasets.
-3. **03_data-cleaning**: Techniques for handling duplicates, `NULL`s, and inconsistencies.
-4. **04_data-aggregation**: Grouping, summarizing, and calculating statistics.
-5. **05_window-functions**: Advanced calculations like rankings and running totals.
-6. **06_date-time-analysis**: Working with temporal data and time series.
-7. **07_text-analysis**: String manipulation, parsing, and pattern matching.
-8. **08_performance-tuning**: Optimize your queries for speed and efficiency.
-9. **09_database-administration**: Understanding schemas, metadata, and relationships.
-10. **10_advanced-analytics**: Complex patterns like cohort and funnel analysis.
-11. **11_security_and_access**: Managing roles, permissions, and data security.
-12. **12_etl_and_batch_processing**: `INSERT-SELECT`, `MERGE` statements, and staging data.
-13. **13_testing_and_validation**: Writing tests and assertions for your data.
-14. **14_templates_and_snippets**: Reusable templates and helpful code snippets.
+### 📚 Foundations (01_foundations)
+1. **01_basic_queries**: Master the fundamentals of `SELECT`, `WHERE`, `JOINs`, and `CTEs`
+2. **02_data_profiling**: Learn how to explore and understand new datasets
+3. **03_data_cleaning**: Techniques for handling duplicates, `NULL`s, and inconsistencies
+
+### 📊 Intermediate (02_intermediate)  
+4. **04_aggregation**: Grouping, summarizing, and calculating statistics
+5. **05_window_functions**: Advanced calculations like rankings and running totals
+6. **06_date_time_analysis**: Working with temporal data and time series
+7. **07_text_analysis**: String manipulation, parsing, and pattern matching
+
+### 🚀 Advanced (03_advanced)
+8. **08_performance_tuning**: Optimize your queries for speed and efficiency
+9. **09_database_administration**: Understanding schemas, metadata, and relationships
+10. **10_advanced_analytics**: Complex patterns like cohort and funnel analysis
+11. **11_cloud_platforms**: Cloud-specific features and optimizations
+
+### 🔧 Real World (04_real_world)
+
+12. **Integration Examples**: Python, R, and other language integrations
+13. **Case Studies**: Industry-specific scenarios and solutions
+14. **Best Practices**: Production-ready SQL development standards
+
+### 🐍 Python Integration (05_python_integration)
+
+1. **Data Analysis Workflows**: Combining SQL and Python for comprehensive analytics
+2. **Visualization & Reporting**: Creating charts, dashboards, and automated reports
+3. **Business Analytics**: Real-world scenarios using Python-SQL integration
+4. **Automation & Scheduling**: Production workflows and pipeline management
 
 ## 📚 Table of Contents
 
-- [01_basic-queries](./01_basic-queries/)
-- [02_data-profiling](./02_data-profiling/)
-- [03_data-cleaning](./03_data-cleaning/)
-- [04_data-aggregation](./04_data-aggregation/)
-- [05_window-functions](./05_window-functions/)
-- [06_date-time-analysis](./06_date-time-analysis/)
-- [07_text-analysis](./07_text-analysis/)
-- [08_performance-tuning](./08_performance-tuning/)
-- [09_database-administration](./09_database-administration/)
-- [10_advanced-analytics](./10_advanced-analytics/)
-- [11_security_and_access](./11_security_and_access/)
-- [12_etl_and_batch_processing](./12_etl_and_batch_processing/)
-- [13_testing_and_validation](./13_testing_and_validation/)
-- [14_templates_and_snippets](./14_templates_and_snippets/)
+### 🚀 Getting Started
+- [00_getting_started](./00_getting_started/) - Setup and learning path guide
+
+### 📖 Learning Modules  
+
+- [01_foundations](./01_foundations/) - Core SQL concepts and data manipulation
+- [02_intermediate](./02_intermediate/) - Analytical techniques and advanced queries  
+- [03_advanced](./03_advanced/) - Performance optimization and complex analytics
+- [04_real_world](./04_real_world/) - Practical applications and industry scenarios
+- [05_python_integration](./05_python_integration/) - Modern analytics with Python and SQL
+
+### 🎯 Hands-On Exercises
+
+- [exercises](./exercises/) - Comprehensive exercise framework with progressive difficulty
+  - [04_real_world_exercises](./exercises/04_real_world_exercises/) - Business scenario challenges
+  - [05_python_integration_exercises](./exercises/05_python_integration_exercises/) - Advanced Python-SQL workflows
+
+### 🔧 Resources & Tools
+- [tools_and_resources](./tools_and_resources/) - Utilities, snippets, and templates
+- [sample_database](./sample_database/) - Complete datasets for practice
+- [reference](./reference/) - Documentation, glossary, and guides
 
 ## 🏷️ Badge Key
 

@@ -1,0 +1,80 @@
+# SQL Analyst Pack - Development Environment
+# This docker-compose file sets up a complete learning environment
+
+version: '3.8'
+
+services:
+  # PostgreSQL database with sample data
+  postgres:
+    image: postgres:15
+    container_name: sql_analyst_pack_db
+    environment:
+      POSTGRES_DB: sql_analyst_pack
+      POSTGRES_USER: analyst
+      POSTGRES_PASSWORD: learning123
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./:/docker-entrypoint-initdb.d/
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U analyst -d sql_analyst_pack"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - sql_network
+
+  # pgAdmin for database management (optional)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: sql_analyst_pack_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@sqlanalyst.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - "8080:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - sql_network
+
+  # Jupyter Lab for Python-SQL integration examples
+  jupyter:
+    image: jupyter/datascience-notebook:latest
+    container_name: sql_analyst_pack_jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: "sqlanalyst"
+    volumes:
+      - ./04_real_world/integration_examples:/home/jovyan/work
+      - jupyter_data:/home/jovyan
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - sql_network
+
+volumes:
+  postgres_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+  jupyter_data:
+    driver: local
+
+networks:
+  sql_network:
+    driver: bridge
+
+# Additional configuration for development
+configs:
+  database_config:
+    file: ./setup_postgresql.sql

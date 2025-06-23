@@ -1,0 +1,160 @@
+version: '3.8'
+
+services:
+  # PostgreSQL - Primary analytical database
+  postgres:
+    image: postgres:15
+    container_name: sql-analyst-postgres
+    environment:
+      POSTGRES_DB: analytics
+      POSTGRES_USER: analyst
+      POSTGRES_PASSWORD: analyst123
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./data/postgres:/docker-entrypoint-initdb.d
+      - ./data/scripts:/scripts
+    networks:
+      - analyst-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U analyst -d analytics"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # MySQL - Alternative relational database
+  mysql:
+    image: mysql:8.0
+    container_name: sql-analyst-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: analytics
+      MYSQL_USER: analyst
+      MYSQL_PASSWORD: analyst123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./data/mysql:/docker-entrypoint-initdb.d
+      - ./config/mysql/my.cnf:/etc/mysql/conf.d/custom.cnf
+    networks:
+      - analyst-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "analyst", "-p$$MYSQL_PASSWORD"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # ClickHouse - Columnar database for analytics
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    container_name: sql-analyst-clickhouse
+    environment:
+      CLICKHOUSE_DB: analytics
+      CLICKHOUSE_USER: analyst
+      CLICKHOUSE_PASSWORD: analyst123
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    volumes:
+      - clickhouse_data:/var/lib/clickhouse
+      - ./data/clickhouse:/docker-entrypoint-initdb.d
+    networks:
+      - analyst-network
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+
+  # Redis - In-memory cache and session store
+  redis:
+    image: redis:7-alpine
+    container_name: sql-analyst-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - analyst-network
+    command: redis-server --appendonly yes --requirepass analyst123
+
+  # Jupyter Lab - Interactive analysis environment
+  jupyter:
+    build:
+      context: ./jupyter
+      dockerfile: Dockerfile
+    container_name: sql-analyst-jupyter
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+      JUPYTER_TOKEN: ""
+      JUPYTER_PASSWORD_HASH: "argon2:$$argon2id$$v=19$$m=10240,t=10,p=8$$iXXH8kR3xzzz9XgQ8ZlOOQ$$P6wqLa6eo/mGfOYV8KiX2KQMbAkM5Z2QqZrfEKjXhZg"
+      # Password: analyst
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work
+      - ../:/home/jovyan/sql-analyst-pack
+      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+    networks:
+      - analyst-network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # pgAdmin - PostgreSQL administration
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: sql-analyst-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@analyst.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+      - ./config/pgadmin/servers.json:/pgadmin4/servers.json
+    networks:
+      - analyst-network
+    depends_on:
+      - postgres
+
+  # Adminer - Universal database management
+  adminer:
+    image: adminer:latest
+    container_name: sql-analyst-adminer
+    ports:
+      - "8080:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+    networks:
+      - analyst-network
+    depends_on:
+      - postgres
+      - mysql
+
+volumes:
+  postgres_data:
+    driver: local
+  mysql_data:
+    driver: local
+  clickhouse_data:
+    driver: local
+  redis_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+
+networks:
+  analyst-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

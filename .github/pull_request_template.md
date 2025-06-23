@@ -12,20 +12,15 @@
 - [ ] 🔧 Chore (dependency updates, build changes, etc.)
 
 ### Which SQL topic area does this affect?
-- [ ] 01_basic-queries
-- [ ] 02_data-profiling
-- [ ] 03_data-cleaning
-- [ ] 04_data-aggregation
-- [ ] 05_window-functions
-- [ ] 06_date-time-analysis
-- [ ] 07_text-analysis
-- [ ] 08_performance-tuning
-- [ ] 09_database-administration
-- [ ] 10_advanced-analytics
-- [ ] 11_security_and_access
-- [ ] 12_etl_and_batch_processing
-- [ ] 13_testing_and_validation
-- [ ] 14_templates_and_snippets
+- [ ] 00_getting_started
+- [ ] 01_foundations (basic queries, data profiling, data cleaning)
+- [ ] 02_intermediate (aggregation, window functions, date/time, text analysis)
+- [ ] 03_advanced (performance tuning, database administration, advanced analytics, cloud platforms)
+- [ ] 04_real_world (business scenarios and case studies)
+- [ ] 05_python_integration
+- [ ] exercises (hands-on practice framework)
+- [ ] tools_and_resources
+- [ ] sample_database
 - [ ] Documentation/Setup
 - [ ] Other: ________________
 
