@@ -442,6 +442,7 @@ if __name__ == "__main__":
 ### 2. Cloud Deployment Options
 
 **AWS Lambda** (for serverless automation):
+
 ```python
 import json
 import boto3
@@ -459,6 +460,7 @@ def lambda_handler(event, context):
 ```
 
 **Google Cloud Functions**:
+
 ```python
 def automated_report(request):
     """Google Cloud Function for automation"""
@@ -474,12 +476,14 @@ def automated_report(request):
 ## Best Practices for Automation
 
 ### 1. Error Handling and Monitoring
+
 - Implement comprehensive logging
 - Set up error notifications
 - Include retry logic for failed operations
 - Monitor resource usage and performance
 
 ### 2. Configuration Management
+
 ```python
 import configparser
 import os
@@ -512,6 +516,7 @@ engine = create_engine(config.database_url)
 ```
 
 ### 3. Testing and Validation
+
 ```python
 def test_automation_functions():
     """Test all automation functions before deployment"""
@@ -552,6 +557,7 @@ def send_test_email():
 ## Maintenance and Monitoring
 
 ### 1. Health Checks
+
 ```python
 def system_health_check():
     """Monitor automation system health"""
@@ -581,6 +587,7 @@ def system_health_check():
 ```
 
 ### 2. Performance Optimization
+
 - Cache frequently used query results
 - Use connection pooling for database connections
 - Implement query timeouts

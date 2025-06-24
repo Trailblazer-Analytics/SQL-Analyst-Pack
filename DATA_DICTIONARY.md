@@ -12,19 +12,21 @@ The Chinook database represents a digital media store, including tables for arti
 
 ## 🗂️ **Table Relationships**
 
-```
+```text
 Artists (1) ──→ (M) Albums (1) ──→ (M) Tracks (M) ──→ (M) InvoiceItems (M) ──→ (1) Invoices (M) ──→ (1) Customers
                                     │                                                  │
-                                    └─→ (M) PlaylistTrack (M) ──→ (1) Playlists      └─→ (1) Employees
+                                    └──→ (M) PlaylistTrack (M) ──→ (1) Playlists      └──→ (1) Employees
                                     │
-                                    └─→ (1) MediaTypes
+                                    └──→ (1) MediaTypes
                                     │
-                                    └─→ (1) Genres
+                                    └──→ (1) Genres
 ```
 
 ## 📋 **Tables and Columns**
 
+
 ### **artists**
+
 Stores information about music artists and bands.
 
 | Column | Type | Description | Constraints |
@@ -36,7 +38,9 @@ Stores information about music artists and bands.
 
 ---
 
+
 ### **albums**
+
 Contains album information linked to artists.
 
 | Column | Type | Description | Constraints |
@@ -49,7 +53,9 @@ Contains album information linked to artists.
 
 ---
 
+
 ### **tracks**
+
 Individual songs/tracks with detailed metadata.
 
 | Column | Type | Description | Constraints |
@@ -68,7 +74,9 @@ Individual songs/tracks with detailed metadata.
 
 ---
 
+
 ### **media_types**
+
 Different media formats available.
 
 | Column | Type | Description | Constraints |
@@ -80,7 +88,9 @@ Different media formats available.
 
 ---
 
+
 ### **genres**
+
 Music genre classifications.
 
 | Column | Type | Description | Constraints |
@@ -92,7 +102,9 @@ Music genre classifications.
 
 ---
 
+
 ### **playlists**
+
 User-created music playlists.
 
 | Column | Type | Description | Constraints |
@@ -104,7 +116,9 @@ User-created music playlists.
 
 ---
 
+
 ### **playlist_track**
+
 Many-to-many relationship between playlists and tracks.
 
 | Column | Type | Description | Constraints |
@@ -116,7 +130,9 @@ Many-to-many relationship between playlists and tracks.
 
 ---
 
+
 ### **customers**
+
 Customer information and contact details.
 
 | Column | Type | Description | Constraints |
@@ -139,7 +155,9 @@ Customer information and contact details.
 
 ---
 
+
 ### **employees**
+
 Company employee information and hierarchy.
 
 | Column | Type | Description | Constraints |
@@ -164,7 +182,9 @@ Company employee information and hierarchy.
 
 ---
 
+
 ### **invoices**
+
 Customer purchase transactions.
 
 | Column | Type | Description | Constraints |
@@ -184,7 +204,9 @@ Customer purchase transactions.
 
 ---
 
+
 ### **invoice_items**
+
 Individual line items within invoices.
 
 | Column | Type | Description | Constraints |
@@ -199,20 +221,26 @@ Individual line items within invoices.
 
 ## 📈 **Key Business Metrics**
 
+
 ### **Sales Data**
+
 - **Total Revenue**: ~$37,000 across all invoices
 - **Average Invoice**: ~$90
 - **Most Expensive Track**: $1.99
 - **Least Expensive Track**: $0.99
 
+
 ### **Catalog Size**
+
 - **Artists**: 275 unique artists
 - **Albums**: 347 albums
 - **Tracks**: 3,503 individual tracks
 - **Genres**: 25 different genres
 - **Playlists**: 18 user-created playlists
 
+
 ### **Customer Base**
+
 - **Total Customers**: 59 customers
 - **Countries Served**: 24 countries
 - **Active Period**: 2009-2013 (5 years)

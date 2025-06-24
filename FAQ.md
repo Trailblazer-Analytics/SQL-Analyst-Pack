@@ -9,6 +9,7 @@
 ### Q: Do I need to install a database to use this project?
 
 **A:** Yes, but we make it easy! We provide multiple options:
+
 - **Docker setup** (recommended): `docker-compose up -d`
 - **Local PostgreSQL** installation
 - **Cloud database** options (Supabase, AWS RDS)
@@ -19,9 +20,10 @@ Follow our [Setup Guide](./SETUP.md) for step-by-step instructions.
 ### Q: Which SQL dialect should I learn first?
 
 **A:** We recommend **PostgreSQL** as it's feature-rich, open-source, and widely used. However, start with the dialect your workplace uses. Our materials cover:
+
 - PostgreSQL (primary focus)
 - MySQL
-- SQL Server  
+- SQL Server
 - SQLite
 - BigQuery
 
@@ -30,6 +32,7 @@ Follow our [Setup Guide](./SETUP.md) for step-by-step instructions.
 ### Q: I'm getting syntax errors when running the scripts. What's wrong?
 
 **A:** Common causes:
+
 - **Wrong SQL dialect**: Check the compatibility notes in each script header
 - **Missing sample data**: Ensure you've loaded the sample databases correctly
 - **Outdated database version**: Some features require recent versions
@@ -38,6 +41,7 @@ Follow our [Setup Guide](./SETUP.md) for step-by-step instructions.
 ### Q: The script works in one database but not another. Why?
 
 **A:** SQL dialects have differences in:
+
 - **Date functions** (`EXTRACT` vs `DATEPART` vs `strftime`)
 - **String concatenation** (`||` vs `CONCAT` vs `+`)
 - **Window function syntax** and availability
@@ -49,6 +53,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: How do I fix "table doesn't exist" errors?
 
 **A:** Ensure you:
+
 1. Loaded the sample databases using `setup_postgresql.sql`
 2. Are connected to the correct database
 3. Use the correct table names (case-sensitive in some databases)
@@ -57,6 +62,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: The Docker setup isn't working. What should I do?
 
 **A:** Try these troubleshooting steps:
+
 1. Ensure Docker is running: `docker --version`
 2. Check port availability: Make sure ports 5432 and 8080 are free
 3. Review logs: `docker-compose logs`
@@ -72,6 +78,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: How long does it take to complete the entire learning path?
 
 **A:** Depends on your background:
+
 - **Complete beginner**: 2-3 months with regular practice
 - **Some SQL experience**: 3-4 weeks
 - **Experienced analyst**: 1-2 weeks for review and advanced topics
@@ -85,19 +92,22 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: What does the script header mean?
 
 **A:** Each script header includes:
+
 - **Purpose**: What the script demonstrates
 - **SQL Flavors**: Compatibility with different databases (✅ = works, ⚠️ = needs edits, ⛔ = not supported)
 - **Notes**: Important assumptions or prerequisites
 
 ### Q: What's the difference between snippets and full scripts?
 
-**A:** 
+**A:**
+
 - **Full scripts** (in sql-training folders): Complete tutorials with explanations
 - **Snippets** (in templates folder): Copy-paste ready code for common tasks
 
 ### Q: How do I adapt scripts for my own data?
 
-**A:** 
+**A:**
+
 1. Replace table and column names with your own
 2. Modify the `WHERE` clauses for your filters
 3. Adjust data types as needed
@@ -108,6 +118,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: Are these scripts production-ready?
 
 **A:** The techniques are production-ready, but scripts should be adapted for your environment:
+
 - Add proper error handling
 - Include performance optimizations for large datasets
 - Add security considerations (avoid hardcoded values)
@@ -116,6 +127,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: How do I handle large datasets?
 
 **A:** See the [Performance Tuning](./sql-training/08_performance-tuning/) section for:
+
 - Index optimization
 - Query plan analysis
 - Efficient JOIN strategies
@@ -124,8 +136,9 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: Can I use these with cloud databases (AWS, Azure, GCP)?
 
 **A:** Yes! Most scripts work with cloud databases:
+
 - **AWS Redshift**: PostgreSQL-compatible
-- **Azure SQL Database**: SQL Server-compatible  
+- **Azure SQL Database**: SQL Server-compatible
 - **Google BigQuery**: Has some unique syntax (noted in scripts)
 - **Snowflake**: Most features supported
 
@@ -134,6 +147,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: I found an error in a script. How do I report it?
 
 **A:** Please [open an issue](https://github.com/your-username/SQL-Analyst-Pack/issues) with:
+
 - Which script has the problem
 - Your database platform
 - Error message
@@ -142,6 +156,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: Can I contribute my own scripts?
 
 **A:** Absolutely! See our [Contributing Guide](./CONTRIBUTING.md) for:
+
 - Style guidelines
 - How to structure your contribution
 - Pull request process
@@ -155,6 +170,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: Will this help me get a data analyst job?
 
 **A:** Yes! This project covers:
+
 - **Core SQL skills** required for most analyst roles
 - **Real-world patterns** you'll use daily
 - **Best practices** that show professional competence
@@ -163,6 +179,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: What should I learn after completing this project?
 
 **A:** Consider expanding into:
+
 - **Python/R** for advanced analytics
 - **Data visualization** tools (Tableau, Power BI)
 - **Statistical analysis** and machine learning
@@ -172,6 +189,7 @@ Look for dialect-specific notes in the script comments and our [Compatibility Gu
 ### Q: Can I use this project in my portfolio?
 
 **A:** Yes! You can:
+
 - Fork the repository and add your own scripts
 - Create case studies using the techniques
 - Write blog posts about your learning journey

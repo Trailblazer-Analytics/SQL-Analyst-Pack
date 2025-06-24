@@ -5,36 +5,44 @@ This directory contains content that has been archived during the SQL Analyst Pa
 ## 📁 Archive Structure
 
 ### `old_structure/`
+
 Content that has been moved or replaced during the project reorganization:
 
 #### **Empty Placeholder Directories (Archived June 22, 2025)**
+
 - `analysis/` - Contained only placeholder README
-- `examples/` - Contained only placeholder README  
+- `examples/` - Contained only placeholder README
 - `performance/` - Contained only placeholder README
 - `reference/` - Contained only placeholder README
 - `reporting/` - Contained only placeholder README
 
 #### **Data Engineering-Focused Content (Archived June 22, 2025)**
+
 - `06_data_engineering.md` - Exercise focused on ETL pipelines and infrastructure
 - `05_distributed_sql_concepts.sql` - Distributed computing and cluster management
 - `07_data_lake_integration.sql` - Data lake architecture and engineering
 - `08_serverless_sql_processing.sql` - Infrastructure and event-driven processing
 
 #### **Old Evaluation Files (Archived June 22, 2025)**
+
 - `PROJECT_REVIEW_ANALYST_FOCUS.md` - Project review document (now superseded)
 - `sql_analyst_pack_evaluation_and_reorganization.ipynb` - Evaluation notebook (outdated)
 
 ## 🎯 Why These Were Archived
 
 ### Business Analyst Focus
+
 The SQL Analyst Pack is designed specifically for **business analysts** who need to:
+
 - Query databases for business insights
 - Create reports and dashboards
 - Analyze data for decision-making
 - Work with existing data infrastructure
 
 ### Not Data Engineering
+
 We archived content focused on:
+
 - Building data infrastructure
 - Managing distributed systems
 - Designing ETL pipelines

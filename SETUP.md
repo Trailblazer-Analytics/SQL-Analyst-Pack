@@ -8,8 +8,8 @@ This project uses the Chinook sample database. The SQL script to create and popu
 
 ### Steps to Set Up the Database
 
-1.  **Create a new database.** The name of the database can be `chinook`.
-2.  **Run the script.** Execute the `sample_database/chinook.sql` script in the new database to create the tables and insert the data.
+1. **Create a new database.** The name of the database can be `chinook`.
+2. **Run the script.** Execute the `sample_database/chinook.sql` script in the new database to create the tables and insert the data.
 
 ## Recommended Editor: Visual Studio Code
 
@@ -29,13 +29,13 @@ alexcvzz.vscode-sqlite
 
 **Instructions:**
 
-1.  **Install the Extension**: Go to the Extensions view in VS Code (`Ctrl+Shift+X`) and search for `alexcvzz.vscode-sqlite`.
-2.  **Open the Command Palette**: (`Ctrl+Shift+P`).
-3.  **Select "SQLite: New Database"**: Type `SQLite: New Database` and press Enter.
-4.  **Save the Database**: Save the new database file as `chinook.db` in the root of this project.
-5.  **Open the Database**: The extension will automatically open the new database.
-6.  **Run the SQL Script**: Right-click on the `chinook.db` file in the explorer, select "Run Query", and then paste the entire contents of `sample_database/chinook.sql` into the editor and run it.
-7.  **Verify**: You should now see all the Chinook database tables in the SQLite Explorer view.
+1. **Install the Extension**: Go to the Extensions view in VS Code (`Ctrl+Shift+X`) and search for `alexcvzz.vscode-sqlite`.
+2. **Open the Command Palette**: (`Ctrl+Shift+P`).
+3. **Select "SQLite: New Database"**: Type `SQLite: New Database` and press Enter.
+4. **Save the Database**: Save the new database file as `chinook.db` in the root of this project.
+5. **Open the Database**: The extension will automatically open the new database.
+6. **Run the SQL Script**: Right-click on the `chinook.db` file in the explorer, select "Run Query", and then paste the entire contents of `sample_database/chinook.sql` into the editor and run it.
+7. **Verify**: You should now see all the Chinook database tables in the SQLite Explorer view.
 
 ## 📝 **Alternative Database Setups**
 

@@ -358,6 +358,7 @@ sqlfluff lint path/to/query.sql
 ### VS Code Integration
 
 The project includes VS Code settings for:
+
 - SQL formatting on save
 - SQLFluff integration
 - Syntax highlighting
@@ -393,6 +394,7 @@ Before submitting SQL code, verify:
 ## Examples by Use Case
 
 ### Data Exploration
+
 ```sql
 -- Quick data profiling query
 SELECT 
@@ -407,6 +409,7 @@ WHERE order_status = 'completed';
 ```
 
 ### Business Reporting
+
 ```sql
 -- Monthly revenue report with growth metrics
 WITH monthly_revenue AS (

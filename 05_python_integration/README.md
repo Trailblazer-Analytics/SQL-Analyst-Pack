@@ -18,35 +18,45 @@ By completing this module, you will:
 ## Module Structure
 
 ### 01_getting_started/
-**Foundation concepts for analysts**
+
+#### Foundation concepts for analysts
+
 - Setting up Python environment for data analysis
 - Database connections with pandas and SQLAlchemy
 - Basic SQL execution from Python
 - Working with query results in DataFrames
 
 ### 02_data_analysis_workflows/
-**Common analyst workflows**
+
+#### Common analyst workflows
+
 - Data profiling and exploration with SQL + pandas
 - Combining multiple data sources
 - Data cleaning and validation workflows
 - Automated data quality reporting
 
 ### 03_visualization_and_reporting/
-**Creating insights and presentations**
+
+#### Creating insights and presentations
+
 - SQL query results to charts and graphs
 - Dashboard creation with Python
 - Automated report generation
 - Export to Excel and PowerPoint
 
 ### 04_business_analytics_examples/
-**Real-world analyst scenarios**
+
+#### Real-world analyst scenarios
+
 - Sales performance analysis and forecasting
 - Customer segmentation with SQL + clustering
 - A/B testing analysis workflows
 - KPI monitoring and alerting
 
 ### 05_automation_and_scheduling/
-**Streamlining routine tasks**
+
+#### Streamlining routine tasks
+
 - Automated data extraction and analysis
 - Scheduled reporting workflows
 - Email and notification integration
@@ -61,6 +71,7 @@ By completing this module, you will:
 ## Required Tools
 
 ### Python Environment
+
 ```bash
 # Core data analysis stack
 pip install pandas sqlalchemy jupyter
@@ -74,6 +85,7 @@ pip install pyodbc           # SQL Server
 ```
 
 ### Development Environment
+
 - **Jupyter Notebook** or **VS Code** with Python extension
 - **Database access** (credentials and permissions)
 - **Optional**: Anaconda for package management
@@ -82,10 +94,10 @@ pip install pyodbc           # SQL Server
 
 This module emphasizes:
 
-✅ **SQL-First Approach**: Python enhances, doesn't replace SQL
+✅ **SQL-First Approach**: Python enhances, doesn't replace SQL  
 ✅ **Business Outcomes**: Focus on actionable insights and decisions  
-✅ **Practical Workflows**: Real scenarios analysts encounter daily
-✅ **Tool Integration**: Working with existing business applications
+✅ **Practical Workflows**: Real scenarios analysts encounter daily  
+✅ **Tool Integration**: Working with existing business applications  
 ✅ **Automation**: Streamlining repetitive analysis tasks
 
 ❌ **Not Covered**: Data engineering, ETL pipeline development, infrastructure management
@@ -101,18 +113,21 @@ This module emphasizes:
 ## Best Practices
 
 ### Code Organization
+
 - Keep SQL queries in separate files when complex
 - Use consistent naming conventions
 - Document business logic and assumptions
 - Version control your analysis scripts
 
 ### Performance Considerations
+
 - Use SQL for heavy lifting (aggregations, joins, filtering)
 - Bring only necessary data into Python
 - Cache results when working iteratively
 - Monitor query performance and optimize
 
 ### Collaboration
+
 - Share reproducible notebooks with colleagues
 - Document data sources and refresh schedules
 - Create parameterized analyses for reuse

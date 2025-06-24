@@ -5,18 +5,21 @@ Comprehensive reference documentation, guides, and lookup resources for SQL lear
 ## 📁 Directory Contents
 
 ### 📖 Quick Reference
+
 - **SQL Syntax Reference** - Complete command syntax and examples
 - **Function Library** - Database functions organized by category
 - **Data Types Guide** - Cross-database data type reference
 - **Operator Reference** - Complete list of SQL operators and usage
 
-### 📋 Style and Standards  
+### 📋 Style and Standards
+
 - **SQL Style Guide** - Formatting and naming conventions
 - **Best Practices** - Industry-standard approaches
 - **Code Review Checklist** - Quality assurance guidelines
 - **Performance Guidelines** - Query optimization principles
 
 ### 🗂️ Glossary and Documentation
+
 - **SQL Glossary** - Definitions of key terms and concepts
 - **Database Concepts** - Fundamental database theory
 - **Common Patterns** - Frequently used query patterns
@@ -25,6 +28,7 @@ Comprehensive reference documentation, guides, and lookup resources for SQL lear
 ## 🚀 Quick Lookup
 
 ### Essential SQL Commands
+
 ```sql
 -- Data Retrieval
 SELECT column1, column2 FROM table_name WHERE condition;
@@ -43,18 +47,21 @@ DROP TABLE table_name;
 ### Common Functions by Category
 
 #### Aggregate Functions
+
 - `COUNT()` - Count rows
 - `SUM()` - Sum values
 - `AVG()` - Average values
 - `MIN()` / `MAX()` - Minimum/Maximum values
 
 #### String Functions
+
 - `CONCAT()` - Concatenate strings
 - `SUBSTRING()` - Extract substring
 - `UPPER()` / `LOWER()` - Change case
 - `LENGTH()` - String length
 
 #### Date Functions
+
 - `NOW()` - Current timestamp
 - `DATE()` - Extract date part
 - `DATEADD()` - Add time interval
@@ -63,6 +70,7 @@ DROP TABLE table_name;
 ## 📊 Database Compatibility
 
 ### SQL Dialects Covered
+
 - **PostgreSQL** - Open source, feature-rich
 - **MySQL** - Popular web database
 - **SQL Server** - Microsoft enterprise database
@@ -71,13 +79,14 @@ DROP TABLE table_name;
 - **BigQuery** - Google's cloud data warehouse
 
 ### Syntax Differences
+
 Common variations between SQL dialects:
 
-| Feature | PostgreSQL | MySQL | SQL Server | SQLite |
-|---------|------------|-------|------------|---------|
-| String Concat | `\|\|` | `CONCAT()` | `+` | `\|\|` |
-| Limit Results | `LIMIT` | `LIMIT` | `TOP` | `LIMIT` |
-| Date Format | `TO_CHAR()` | `DATE_FORMAT()` | `FORMAT()` | `strftime()` |
+| Feature        | PostgreSQL | MySQL      | SQL Server | SQLite    |
+|---------------|------------|------------|------------|-----------|
+| String Concat | `||`       | `CONCAT()` | `+`        | `||`      |
+| Limit Results | `LIMIT`    | `LIMIT`    | `TOP`      | `LIMIT`   |
+| Date Format   | `TO_CHAR()`| `DATE_FORMAT()` | `FORMAT()` | `strftime()` |
 
 ## 🎯 How to Use This Reference
 

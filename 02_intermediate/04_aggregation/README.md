@@ -22,12 +22,14 @@ By completing this module, you will be able to:
 ## 📚 What You'll Learn
 
 ### Core Concepts
+
 - **Aggregate Functions**: SUM, COUNT, AVG, MIN, MAX, and their advanced applications
 - **Grouping Strategies**: Single and multi-column grouping, ROLLUP, CUBE
 - **Time-Based Analysis**: Period comparisons, running totals, growth calculations
 - **Statistical Analysis**: Percentiles, standard deviation, correlation analysis
 
 ### Business Applications
+
 - **Sales Analytics**: Revenue analysis, customer segmentation, product performance
 - **Performance Metrics**: KPI calculation, trend analysis, variance reporting
 - **Financial Analysis**: P&L summaries, budget vs actual, profitability analysis
@@ -49,12 +51,15 @@ By completing this module, you will be able to:
 ## 🚀 Getting Started
 
 ### Step 1: Foundation Check
+
 Ensure you've mastered the foundation modules, especially data profiling and cleaning, as aggregation works best with clean, well-understood data.
 
 ### Step 2: Business Context First
+
 Before diving into SQL, understand what business questions you're trying to answer. Aggregation is most powerful when driven by business needs.
 
 ### Step 3: Progressive Complexity
+
 Start with simple GROUP BY statements and gradually build to complex multi-dimensional analysis.
 
 ---
@@ -62,18 +67,21 @@ Start with simple GROUP BY statements and gradually build to complex multi-dimen
 ## 💼 Business Scenarios Covered
 
 ### 🎵 Music Industry Analytics (Chinook)
+
 - **Sales Performance**: Track sales by artist, genre, and time period
 - **Customer Analytics**: Customer lifetime value, purchase patterns, segmentation
 - **Inventory Management**: Most/least popular tracks, album performance analysis
 - **Geographic Analysis**: Sales by country, regional trends, market penetration
 
 ### 📈 Executive Reporting
+
 - **Revenue Dashboards**: Monthly/quarterly revenue summaries with growth metrics
 - **Performance KPIs**: Customer acquisition costs, average order values, conversion rates
 - **Operational Metrics**: Employee performance, sales team effectiveness
 - **Comparative Analysis**: Year-over-year growth, seasonal patterns, market trends
 
 ### 💰 Financial Analysis
+
 - **Profitability Analysis**: Product margins, customer profitability, cost analysis
 - **Budget Management**: Actual vs budget comparisons, variance analysis
 - **Risk Assessment**: Revenue concentration, customer dependency analysis
@@ -84,21 +92,27 @@ Start with simple GROUP BY statements and gradually build to complex multi-dimen
 ## 🎓 Progressive Learning Path
 
 ### 🟢 **Beginner Aggregation** (Script 1)
+
 Learn fundamental concepts that form the foundation of all analytical work:
+
 - Basic GROUP BY with single columns
 - Essential aggregate functions (SUM, COUNT, AVG)
 - Simple business calculations and KPIs
 - Data validation through aggregation
 
 ### 🟡 **Intermediate Analysis** (Script 2)
+
 Build sophisticated analytical capabilities:
+
 - Time-based grouping and trending
 - Multi-column grouping strategies
 - Period-over-period comparisons
 - Growth rate calculations
 
 ### 🔴 **Advanced Techniques** (Scripts 3-4)
+
 Master enterprise-level analytical skills:
+
 - ROLLUP and CUBE for hierarchical analysis
 - Statistical functions and data science applications
 - Performance optimization for large datasets
@@ -109,6 +123,7 @@ Master enterprise-level analytical skills:
 ## 🛠️ Key Techniques You'll Master
 
 ### Aggregation Functions
+
 ```sql
 -- Revenue analysis example
 SELECT 
@@ -124,6 +139,7 @@ ORDER BY month;
 ```
 
 ### Advanced Grouping
+
 ```sql
 -- Multi-dimensional sales analysis
 SELECT 
@@ -140,6 +156,7 @@ ORDER BY Country, Genre.Name;
 ```
 
 ### Time Series Analysis
+
 ```sql
 -- Year-over-year growth calculation
 WITH monthly_revenue AS (
@@ -167,13 +184,14 @@ ORDER BY year, month;
 
 ## 📈 Analytics Framework
 
-```
+```text
 Raw Data → Group & Summarize → Calculate Metrics → Generate Insights → Drive Decisions
     ↓             ↓                 ↓                ↓                ↓
 Clean data    GROUP BY         Business KPIs    Trend analysis    Action plans
 ```
 
 ### Key Performance Indicators (KPIs)
+
 - **Revenue Metrics**: Total sales, average order value, revenue per customer
 - **Customer Metrics**: Customer count, retention rate, lifetime value
 - **Product Metrics**: Best sellers, inventory turnover, profit margins
@@ -184,18 +202,21 @@ Clean data    GROUP BY         Business KPIs    Trend analysis    Action plans
 ## 🎯 Real-World Applications
 
 ### Sales Management
+
 - Daily/weekly/monthly sales reports
 - Sales team performance tracking
 - Product performance analysis
 - Customer segmentation for targeted marketing
 
 ### Financial Reporting
+
 - Income statement preparation
 - Budget variance analysis
 - Profitability analysis by product/customer/region
 - Cost center performance evaluation
 
 ### Strategic Planning
+
 - Market trend analysis
 - Competitive positioning
 - Growth opportunity identification
@@ -206,6 +227,7 @@ Clean data    GROUP BY         Business KPIs    Trend analysis    Action plans
 ## 🔧 Advanced Features
 
 ### Window Functions Integration
+
 ```sql
 -- Running totals and rankings
 SELECT 
@@ -218,6 +240,7 @@ ORDER BY InvoiceDate;
 ```
 
 ### Statistical Analysis
+
 ```sql
 -- Customer purchase behavior analysis
 SELECT 
@@ -239,11 +262,13 @@ ORDER BY purchase_count DESC;
 ## 📊 Performance Optimization
 
 ### Indexing Strategy
+
 - Index on frequently grouped columns
 - Consider composite indexes for multi-column grouping
 - Monitor query execution plans for aggregation operations
 
 ### Query Optimization
+
 - Use appropriate data types for calculations
 - Consider materialized views for frequently accessed aggregations
 - Implement incremental aggregation for large datasets
@@ -253,18 +278,21 @@ ORDER BY purchase_count DESC;
 ## 🎓 Exercises & Practice
 
 ### Beginner Challenges
+
 1. Calculate monthly sales totals and growth rates
 2. Identify top-performing products and artists
 3. Analyze customer purchase patterns
 4. Create basic financial summaries
 
 ### Intermediate Projects
+
 1. Build comprehensive sales dashboards
 2. Implement customer segmentation analysis
 3. Create inventory turnover reports
 4. Develop trend analysis and forecasting
 
 ### Advanced Applications
+
 1. Design multi-dimensional OLAP cubes
 2. Implement statistical quality control
 3. Build real-time aggregation pipelines

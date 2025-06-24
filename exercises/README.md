@@ -28,7 +28,7 @@ Each exercise includes:
 
 ### 01_foundations_exercises/
 
-#### 🟢 Beginner Level
+#### 🟢 Beginner Level (Foundations)
 
 - Basic SQL syntax and query structure
 - Simple filtering and sorting
@@ -37,7 +37,7 @@ Each exercise includes:
 
 ### 02_intermediate_exercises/
 
-#### 🟡 Intermediate Level
+#### 🟡 Intermediate Level (Intermediate)
 
 - Complex joins and relationships
 - Advanced filtering with subqueries
@@ -46,7 +46,7 @@ Each exercise includes:
 
 ### 03_advanced_exercises/
 
-#### 🔴 Advanced Level
+#### 🔴 Advanced Level (Advanced)
 
 - Complex business logic implementation
 - Performance optimization techniques
@@ -55,7 +55,7 @@ Each exercise includes:
 
 ### 04_real_world_scenarios/
 
-#### 🟣 Expert Level
+#### 🟣 Expert Level (Real World)
 
 - End-to-end business analysis projects
 - Multiple solution approaches
@@ -64,7 +64,7 @@ Each exercise includes:
 
 ### 05_python_integration_exercises/
 
-#### 🟡-🔴 Mixed Level
+#### 🟡-🔴 Mixed Level (Python Integration)
 
 ##### Beginner Level (🟢)
 
@@ -126,7 +126,7 @@ ORDER BY schemaname, tablename;
 
 Track your progress through each exercise category:
 
-#### 01_foundations_exercises/
+#### 01_foundations_exercises/ (Checklist)
 
 - [ ] Exercise 1: Data Exploration Basics
 - [ ] Exercise 2: Customer Analysis Fundamentals
@@ -134,7 +134,7 @@ Track your progress through each exercise category:
 - [ ] Exercise 4: Product Performance Analysis
 - [ ] Exercise 5: Data Quality Assessment
 
-#### 02_intermediate_exercises/
+#### 02_intermediate_exercises/ (Checklist)
 
 - [ ] Exercise 1: Multi-Table Customer Analysis
 - [ ] Exercise 2: Time-Series Sales Analysis
@@ -142,7 +142,7 @@ Track your progress through each exercise category:
 - [ ] Exercise 4: Advanced Aggregations
 - [ ] Exercise 5: Window Functions Mastery
 
-#### 03_advanced_exercises/
+#### 03_advanced_exercises/ (Checklist)
 
 - [ ] Exercise 1: Customer Lifetime Value Modeling
 - [ ] Exercise 2: Advanced Segmentation Analysis
@@ -150,7 +150,7 @@ Track your progress through each exercise category:
 - [ ] Exercise 4: Complex Business Logic Implementation
 - [ ] Exercise 5: Statistical Analysis with SQL
 
-#### 04_real_world_scenarios/
+#### 04_real_world_scenarios/ (Checklist)
 
 - [ ] Scenario 1: Executive Dashboard Creation
 - [ ] Scenario 2: Marketing Campaign Analysis
@@ -158,7 +158,7 @@ Track your progress through each exercise category:
 - [ ] Scenario 4: Financial Performance Review
 - [ ] Scenario 5: Customer Churn Prediction
 
-#### 05_python_integration_exercises/
+#### 05_python_integration_exercises/ (Checklist)
 
 - [ ] Exercise 1: Database Connection and Basic Analysis
 - [ ] Exercise 2: Automated Reporting Workflow
