@@ -1,5 +1,7 @@
 # Exercise 11: Real-Time Analytics with Streaming Data
 
+**Author:** Alexander Nykolaiszyn  |  **Last Updated:** 2025-06-24
+
 ## Business Context
 
 You're a **Principal Data Engineer** at **StreamInsights Corp**, specializing in real-time analytics for digital businesses. Your client, **DigitalCommerce Plus**, needs a comprehensive real-time analytics system to monitor customer behavior, detect fraud, optimize marketing campaigns, and enable instant business decision-making. You'll build a production-grade streaming analytics platform combining real-time data ingestion, SQL stream processing, and Python-based real-time dashboards.
@@ -21,6 +23,7 @@ By completing this exercise, you will:
 **Challenge:** "We need to move from batch analytics to real-time insights. Our business moves too fast for yesterday's reports."
 
 **Key Requirements:**
+
 1. **Real-Time Monitoring**: Track customer behavior and business KPIs as they happen
 2. **Fraud Detection**: Identify suspicious transactions within seconds
 3. **Campaign Optimization**: Adjust marketing campaigns based on real-time performance
@@ -30,13 +33,15 @@ By completing this exercise, you will:
 ## Architecture Overview
 
 ### Real-Time Data Flow
-```
+
+```text
 Customer Actions → Web/Mobile Apps → Kafka Streams → SQL Processing → Dashboards
-                                                    → Alerting System
-                                                    → Machine Learning Models
+                                        → Alerting System
+                                        → Machine Learning Models
 ```
 
 ### Technology Stack
+
 - **Streaming Platform**: Apache Kafka
 - **Stream Processing**: Kafka Streams, Python
 - **Real-Time SQL**: ksqlDB, Materialized Views
@@ -44,9 +49,8 @@ Customer Actions → Web/Mobile Apps → Kafka Streams → SQL Processing → Da
 - **Alerts**: Custom Python service
 - **Storage**: PostgreSQL (for persistence), Redis (for caching)
 
-## Dataset Overview
-
 ### Streaming Data Sources
+
 ```python
 # Real-time event schemas
 customer_events = {
@@ -95,6 +99,7 @@ inventory_events = {
 **Business Objective**: Build a robust real-time data pipeline that can handle high-volume streaming data with low latency.
 
 #### 1.1 Kafka Producer Setup
+
 ```python
 import json
 import time
@@ -255,6 +260,7 @@ simulator.start_streaming(events_per_second=50)
 ```
 
 #### 1.2 Stream Processing with Python
+
 ```python
 import json
 from kafka import KafkaConsumer, KafkaProducer
@@ -545,6 +551,7 @@ processor.start_processing()
 ### Task 2: Real-Time Dashboard and Visualization
 
 #### 2.1 Live Dashboard with Streamlit
+
 ```python
 import streamlit as st
 import plotly.graph_objects as go
@@ -840,6 +847,7 @@ if __name__ == "__main__":
 ### Task 3: Production Deployment and Monitoring
 
 #### 3.1 Docker Compose Setup
+
 ```yaml
 # docker-compose.yml for complete real-time analytics stack
 version: '3.8'
@@ -927,6 +935,7 @@ volumes:
 ```
 
 #### 3.2 Production Monitoring and Alerting
+
 ```python
 import asyncio
 import aiohttp
@@ -1219,6 +1228,7 @@ if __name__ == "__main__":
 ## Business Impact Assessment
 
 ### Key Performance Indicators
+
 - **Processing Latency**: <100ms from event to dashboard update
 - **System Uptime**: 99.9% availability for real-time analytics
 - **Fraud Detection**: <5 seconds from transaction to fraud alert
@@ -1226,6 +1236,7 @@ if __name__ == "__main__":
 - **Alert Delivery**: <30 seconds for critical business alerts
 
 ### ROI Analysis
+
 - **Fraud Prevention**: $3.2M annually saved through real-time detection
 - **Inventory Optimization**: $1.8M annually from reduced stockouts
 - **Customer Experience**: $2.1M revenue protection from instant issue detection
@@ -1235,15 +1246,19 @@ if __name__ == "__main__":
 ## Extension Challenges
 
 ### Challenge 1: Multi-Region Deployment
+
 Scale the system across multiple geographic regions with data locality requirements.
 
 ### Challenge 2: ML Model Integration
+
 Integrate real-time machine learning models for dynamic pricing and personalization.
 
 ### Challenge 3: Advanced Analytics
+
 Add complex event processing for customer journey analysis and attribution modeling.
 
 ### Challenge 4: Edge Computing
+
 Implement edge analytics for reduced latency in global deployments.
 
 ---

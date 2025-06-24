@@ -1,5 +1,7 @@
 # Exercise 10: Advanced Time Series Analytics with Python and SQL
 
+**Author:** Alexander Nykolaiszyn  |  **Last Updated:** 2025-06-24
+
 ## Business Context
 
 You're a **Senior Data Analyst** at **TrendCast Analytics**, a consulting firm specializing in forecasting and trend analysis for retail clients. Your client, **GlobalRetail Corp**, needs sophisticated time series analysis to optimize inventory planning, predict seasonal demand, and identify emerging market trends. You'll build production-ready time series analytics combining SQL data extraction with Python's advanced statistical modeling capabilities.
@@ -21,6 +23,7 @@ By completing this exercise, you will:
 **Challenge:** "We need accurate demand forecasting to optimize inventory levels and reduce stockouts while minimizing carrying costs."
 
 **Key Requirements:**
+
 1. **Seasonal Forecasting**: Predict demand 12 weeks ahead with seasonal adjustments
 2. **Anomaly Detection**: Identify unusual patterns that require immediate attention
 3. **Multi-Product Analysis**: Scale forecasting across 500+ product categories
@@ -30,6 +33,7 @@ By completing this exercise, you will:
 ## Dataset Overview
 
 ### Time Series Tables
+
 ```sql
 -- Daily sales data with multiple dimensions
 sales_daily (
@@ -69,6 +73,7 @@ inventory_daily (
 **Business Objective**: Create comprehensive time series datasets with engineered features for forecasting models.
 
 #### 1.1 SQL Data Foundation
+
 ```sql
 -- Create comprehensive time series dataset with lag features
 WITH daily_metrics AS (
@@ -155,6 +160,7 @@ ORDER BY product_category, region, date_id;
 ```
 
 #### 1.2 Python Time Series Pipeline
+
 ```python
 import pandas as pd
 import numpy as np
@@ -409,11 +415,11 @@ for category in categories:
 print("\n=== EXECUTIVE SUMMARY ===")
 for category, result in results.items():
     print(f"{category}: {result['mape']} MAPE, {len(result['business_recommendations'])} recommendations")
-```
 
 ### Task 2: Real-Time Anomaly Detection System
 
 #### 2.1 Automated Anomaly Detection Pipeline
+
 ```python
 import schedule
 import time
@@ -591,6 +597,7 @@ while True:
 ### Task 3: Production Deployment and Monitoring
 
 #### 3.1 Docker Deployment Configuration
+
 ```dockerfile
 # Dockerfile for time series analytics service
 FROM python:3.9-slim
@@ -604,209 +611,3 @@ RUN apt-get update && apt-get install -y \
 
 # Install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy application code
-COPY . .
-
-# Create directories for outputs
-RUN mkdir -p /app/outputs /app/logs
-
-# Set environment variables
-ENV PYTHONPATH=/app
-ENV TZ=UTC
-
-# Expose port for health checks
-EXPOSE 8080
-
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
-    CMD python -c "import requests; requests.get('http://localhost:8080/health')"
-
-# Run the application
-CMD ["python", "time_series_service.py"]
-```
-
-#### 3.2 Production Service Implementation
-```python
-from flask import Flask, jsonify, request
-import logging
-from datetime import datetime
-import os
-
-app = Flask(__name__)
-
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('/app/logs/time_series_service.log'),
-        logging.StreamHandler()
-    ]
-)
-
-class TimeSeriesService:
-    """Production time series analytics service"""
-    
-    def __init__(self):
-        self.analyzer = TimeSeriesAnalyzer(os.getenv('DATABASE_URL'))
-        self.detector = RealTimeAnomalyDetector(
-            os.getenv('DATABASE_URL'),
-            {
-                'from_email': os.getenv('ALERT_FROM_EMAIL'),
-                'alert_recipients': os.getenv('ALERT_RECIPIENTS').split(','),
-                'smtp_server': os.getenv('SMTP_SERVER'),
-                'email_user': os.getenv('EMAIL_USER'),
-                'email_password': os.getenv('EMAIL_PASSWORD')
-            }
-        )
-        
-service = TimeSeriesService()
-
-@app.route('/health', methods=['GET'])
-def health_check():
-    """Health check endpoint"""
-    return jsonify({
-        'status': 'healthy',
-        'timestamp': datetime.now().isoformat(),
-        'service': 'time_series_analytics'
-    })
-
-@app.route('/forecast', methods=['POST'])
-def generate_forecast():
-    """Generate forecast for specific product-region combination"""
-    
-    try:
-        data = request.json
-        product_category = data.get('product_category')
-        region = data.get('region')
-        forecast_days = data.get('forecast_days', 84)
-        
-        logging.info(f"Generating forecast for {product_category} in {region}")
-        
-        # Extract data and generate forecast
-        df = service.analyzer.extract_time_series_data(product_category, region)
-        model, forecast = service.analyzer.build_prophet_model(df)
-        insights = service.analyzer.generate_forecast_report(
-            model, forecast, df, product_category
-        )
-        
-        return jsonify({
-            'success': True,
-            'forecast': insights,
-            'generated_at': datetime.now().isoformat()
-        })
-        
-    except Exception as e:
-        logging.error(f"Forecast generation failed: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
-
-@app.route('/anomalies/detect', methods=['POST'])
-def detect_anomalies():
-    """Run anomaly detection"""
-    
-    try:
-        anomalies = service.detector.run_daily_anomaly_check()
-        
-        return jsonify({
-            'success': True,
-            'anomalies_detected': len(anomalies),
-            'anomalies': anomalies,
-            'checked_at': datetime.now().isoformat()
-        })
-        
-    except Exception as e:
-        logging.error(f"Anomaly detection failed: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
-
-@app.route('/metrics/dashboard', methods=['GET'])
-def dashboard_metrics():
-    """Get metrics for monitoring dashboard"""
-    
-    try:
-        # Get recent forecasting accuracy
-        accuracy_query = """
-        SELECT 
-            product_category,
-            AVG(forecast_accuracy) as avg_accuracy,
-            COUNT(*) as forecast_count
-        FROM forecast_log 
-        WHERE created_at >= NOW() - INTERVAL '7 days'
-        GROUP BY product_category
-        ORDER BY avg_accuracy DESC
-        """
-        
-        accuracy_data = pd.read_sql(accuracy_query, service.analyzer.engine)
-        
-        # Get recent anomalies
-        anomaly_query = """
-        SELECT 
-            COUNT(*) as total_anomalies,
-            SUM(CASE WHEN impact_level = 'HIGH' THEN 1 ELSE 0 END) as high_impact,
-            SUM(CASE WHEN status = 'RESOLVED' THEN 1 ELSE 0 END) as resolved
-        FROM anomaly_log 
-        WHERE detected_date >= NOW() - INTERVAL '7 days'
-        """
-        
-        anomaly_data = pd.read_sql(anomaly_query, service.analyzer.engine)
-        
-        return jsonify({
-            'success': True,
-            'metrics': {
-                'forecast_accuracy': accuracy_data.to_dict('records'),
-                'anomaly_summary': anomaly_data.to_dict('records')[0],
-                'system_status': 'operational',
-                'last_updated': datetime.now().isoformat()
-            }
-        })
-        
-    except Exception as e:
-        logging.error(f"Dashboard metrics failed: {e}")
-        return jsonify({
-            'success': False,
-            'error': str(e)
-        }), 500
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=False)
-```
-
-## Business Impact Assessment
-
-### Key Metrics and KPIs
-- **Forecast Accuracy**: Achieve <15% MAPE for 12-week forecasts
-- **Anomaly Detection**: <30 minutes from occurrence to alert
-- **Inventory Optimization**: 20% reduction in stockouts, 15% reduction in carrying costs
-- **Processing Speed**: Real-time analysis of 500+ product categories
-- **System Reliability**: 99.5% uptime for production service
-
-### ROI Calculation
-- **Cost Savings**: $2.3M annually from optimized inventory management
-- **Revenue Protection**: $1.8M annually from faster anomaly response
-- **Implementation Cost**: $450K (development + infrastructure)
-- **ROI**: 811% over 2 years
-
-## Extension Challenges
-
-### Challenge 1: Multi-Store Forecasting
-Extend the system to handle 200+ individual store locations with location-specific factors.
-
-### Challenge 2: External Data Integration
-Incorporate weather data, economic indicators, and social media sentiment into forecasting models.
-
-### Challenge 3: Hierarchical Forecasting
-Implement hierarchical forecasting that ensures store-level forecasts roll up to regional and national totals.
-
-### Challenge 4: Model Ensemble
-Build ensemble models combining ARIMA, Prophet, and machine learning approaches for improved accuracy.
-
----
-
-*This exercise demonstrates production-ready time series analytics that directly supports critical business decisions in retail demand planning and inventory optimization.*

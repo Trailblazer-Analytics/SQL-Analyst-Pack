@@ -34,22 +34,22 @@ Every `.sql` file must begin with this header, fully filled out:
 
 ### Commenting
 
-*   Use ANSI-standard syntax (`--` for single-line, `/* ... */` for multi-line) wherever possible.
-*   Place comments **above** the line of code they refer to, not at the end of the line.
-*   For complex logic, use C-style `/* ... */` blocks to explain the approach.
-*   Include at least one sample query and a comment explaining the expected result.
-*   Use flavor-tagged blocks for syntax that differs between database systems:
+-   Use ANSI-standard syntax (`--` for single-line, `/* ... */` for multi-line) wherever possible.
+-   Place comments **above** the line of code they refer to, not at the end of the line.
+-   For complex logic, use C-style `/* ... */` blocks to explain the approach.
+-   Include at least one sample query and a comment explaining the expected result.
+-   Use flavor-tagged blocks for syntax that differs between database systems:
 
-```sql
--- POSTGRES ONLY
---   ...explanation of the difference...
-```
+    ```sql
+    -- POSTGRES ONLY
+    --   ...explanation of the difference...
+    ```
 
 ### Formatting
 
-*   **Indentation**: Use tabs, which should be set to 4 spaces.
-*   **Line Length**: Keep lines at or below 120 characters.
-*   **Keywords**: Use uppercase for SQL keywords (`SELECT`, `FROM`, `WHERE`, etc.).
+-   **Indentation**: Use tabs, which should be set to 4 spaces.
+-   **Line Length**: Keep lines at or below 120 characters.
+-   **Keywords**: Use uppercase for SQL keywords (`SELECT`, `FROM`, `WHERE`, etc.).
 
 ## Pull Request Process
 

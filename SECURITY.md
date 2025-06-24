@@ -13,12 +13,14 @@ This repository contains educational SQL scripts and documentation. As this is p
 
 While this repository primarily contains educational SQL scripts, we take security seriously. If you discover a security vulnerability, please follow these steps:
 
-### For SQL Security Issues:
+### For SQL Security Issues
+
 - **SQL Injection vulnerabilities** in example scripts
 - **Unsafe SQL patterns** that could mislead learners
 - **Database security misconfigurations** in setup guides
 
-### How to Report:
+### How to Report
+
 1. **DO NOT** open a public issue for security vulnerabilities
 2. Email the maintainers directly (if public email available) or
 3. Use GitHub's private vulnerability reporting feature
@@ -28,7 +30,8 @@ While this repository primarily contains educational SQL scripts, we take securi
    - Potential impact
    - Suggested fix (if available)
 
-### What to Expect:
+### What to Expect
+
 - **Acknowledgment** within 48 hours
 - **Assessment** within 1 week
 - **Fix timeline** depends on severity:
@@ -37,7 +40,8 @@ While this repository primarily contains educational SQL scripts, we take securi
   - Medium: 2 weeks
   - Low: 1 month
 
-### Security Best Practices for Contributors:
+### Security Best Practices for Contributors
+
 - Never include real credentials or connection strings in scripts
 - Use placeholder values (e.g., `your_password_here`)
 - Avoid SQL patterns that could encourage bad security practices
@@ -47,11 +51,13 @@ While this repository primarily contains educational SQL scripts, we take securi
 ## Scope
 
 This security policy covers:
+
 - SQL scripts and their educational content
 - Documentation and setup guides
 - Repository infrastructure and workflows
 
 This policy does not cover:
+
 - Third-party databases or tools referenced in documentation
 - Issues with users' local database installations
 - General SQL education questions (use discussions instead)
@@ -59,6 +65,7 @@ This policy does not cover:
 ## Security Contact
 
 For security-related questions or reports:
+
 - Create a private vulnerability report on GitHub
 - Tag issues with `security` label when appropriate
 

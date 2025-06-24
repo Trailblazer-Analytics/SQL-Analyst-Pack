@@ -1,5 +1,7 @@
 # Exercise 12: ML Feature Engineering for Business Analytics
 
+**Author:** Alexander Nykolaiszyn  |  **Last Updated:** 2025-06-24
+
 **Difficulty:** Advanced  
 **Estimated Time:** 90-120 minutes  
 **Business Context:** Creating machine learning features from raw business data to support predictive analytics and advanced business insights.

@@ -37,19 +37,22 @@ alexcvzz.vscode-sqlite
 6.  **Run the SQL Script**: Right-click on the `chinook.db` file in the explorer, select "Run Query", and then paste the entire contents of `sample_database/chinook.sql` into the editor and run it.
 7.  **Verify**: You should now see all the Chinook database tables in the SQLite Explorer view.
 
-## 🗄️ **Alternative Database Setups**
+## 📝 **Alternative Database Setups**
 
 ### PostgreSQL Setup
+
 1. Install PostgreSQL and create a new database called `chinook`
 2. Use the [PostgreSQL version of Chinook](https://github.com/lerocha/chinook-database/blob/master/ChinookDatabase/DataSources/Chinook_PostgreSql.sql)
 3. Install the [PostgreSQL extension](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql) for VS Code
 
 ### MySQL Setup
+
 1. Install MySQL and create a new database called `chinook`
 2. Use the [MySQL version of Chinook](https://github.com/lerocha/chinook-database/blob/master/ChinookDatabase/DataSources/Chinook_MySql.sql)
 3. Install the [MySQL extension](https://marketplace.visualstudio.com/items?itemName=formulahendry.vscode-mysql) for VS Code
 
 ### SQL Server Setup
+
 1. Install SQL Server (Express edition is free) and create a new database called `chinook`
 2. Use the [SQL Server version of Chinook](https://github.com/lerocha/chinook-database/blob/master/ChinookDatabase/DataSources/Chinook_SqlServer.sql)
 3. Install the [SQL Server extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) for VS Code

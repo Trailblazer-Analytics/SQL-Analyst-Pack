@@ -22,26 +22,32 @@ Transform your data analysis skills with this structured, hands-on learning reso
 Our educational progression is designed for maximum learning effectiveness:
 
 ### 📚 [00_getting_started](./00_getting_started/) - Your Journey Begins
+
 **Time:** 1-2 hours | **Level:** Anyone  
 Set up your environment and understand the learning path ahead.
 
-### 📖 [01_foundations](./01_foundations/) - Core SQL Mastery  
+### 📖 [01_foundations](./01_foundations/) - Core SQL Mastery
+
 **Time:** 4 weeks | **Level:** Beginner  
 Master fundamental SQL concepts, data profiling, and cleaning techniques.
 
 ### 📊 [02_intermediate](./02_intermediate/) - Analytical Techniques
+
 **Time:** 6 weeks | **Level:** Intermediate  
 Learn aggregation, window functions, time-series analysis, and text processing.
 
 ### 🚀 [03_advanced](./03_advanced/) - Expert-Level Skills
+
 **Time:** 8 weeks | **Level:** Advanced  
 Performance tuning, database administration, advanced analytics, and cloud platforms.
 
-### 🔧 [04_real_world](./04_real_world/) - Practical Applications  
+### 🔧 [04_real_world](./04_real_world/) - Practical Applications
+
 **Time:** Ongoing | **Level:** Professional  
 Industry scenarios, integration examples, case studies, and best practices.
 
 ### 🐍 [05_python_integration](./05_python_integration/) - Modern Analytics Stack
+
 **Time:** 4 weeks | **Level:** Intermediate to Advanced  
 Combine SQL with Python for data analysis, visualization, automation, and machine learning.
 
@@ -77,27 +83,30 @@ Combine SQL with Python for data analysis, visualization, automation, and machin
 This repository is organized as a sequential learning path. Each module builds upon the concepts of the previous one, providing a clear progression of skills.
 
 ### 📚 Foundations (01_foundations)
+
 1. **01_basic_queries**: Master the fundamentals of `SELECT`, `WHERE`, `JOINs`, and `CTEs`
 2. **02_data_profiling**: Learn how to explore and understand new datasets
 3. **03_data_cleaning**: Techniques for handling duplicates, `NULL`s, and inconsistencies
 
-### 📊 Intermediate (02_intermediate)  
-4. **04_aggregation**: Grouping, summarizing, and calculating statistics
-5. **05_window_functions**: Advanced calculations like rankings and running totals
-6. **06_date_time_analysis**: Working with temporal data and time series
-7. **07_text_analysis**: String manipulation, parsing, and pattern matching
+### 📊 Intermediate (02_intermediate)
+
+1. **04_aggregation**: Grouping, summarizing, and calculating statistics
+2. **05_window_functions**: Advanced calculations like rankings and running totals
+3. **06_date_time_analysis**: Working with temporal data and time series
+4. **07_text_analysis**: String manipulation, parsing, and pattern matching
 
 ### 🚀 Advanced (03_advanced)
-8. **08_performance_tuning**: Optimize your queries for speed and efficiency
-9. **09_database_administration**: Understanding schemas, metadata, and relationships
-10. **10_advanced_analytics**: Complex patterns like cohort and funnel analysis
-11. **11_cloud_platforms**: Cloud-specific features and optimizations
+
+1. **08_performance_tuning**: Optimize your queries for speed and efficiency
+2. **09_database_administration**: Understanding schemas, metadata, and relationships
+3. **10_advanced_analytics**: Complex patterns like cohort and funnel analysis
+4. **11_cloud_platforms**: Cloud-specific features and optimizations
 
 ### 🔧 Real World (04_real_world)
 
-12. **Integration Examples**: Python, R, and other language integrations
-13. **Case Studies**: Industry-specific scenarios and solutions
-14. **Best Practices**: Production-ready SQL development standards
+1. **Integration Examples**: Python, R, and other language integrations
+2. **Case Studies**: Industry-specific scenarios and solutions
+3. **Best Practices**: Production-ready SQL development standards
 
 ### 🐍 Python Integration (05_python_integration)
 
@@ -109,9 +118,10 @@ This repository is organized as a sequential learning path. Each module builds u
 ## 📚 Table of Contents
 
 ### 🚀 Getting Started
+
 - [00_getting_started](./00_getting_started/) - Setup and learning path guide
 
-### 📖 Learning Modules  
+### 📖 Learning Modules
 
 - [01_foundations](./01_foundations/) - Core SQL concepts and data manipulation
 - [02_intermediate](./02_intermediate/) - Analytical techniques and advanced queries  
@@ -126,6 +136,7 @@ This repository is organized as a sequential learning path. Each module builds u
   - [05_python_integration_exercises](./exercises/05_python_integration_exercises/) - Advanced Python-SQL workflows
 
 ### 🔧 Resources & Tools
+
 - [tools_and_resources](./tools_and_resources/) - Utilities, snippets, and templates
 - [sample_database](./sample_database/) - Complete datasets for practice
 - [reference](./reference/) - Documentation, glossary, and guides

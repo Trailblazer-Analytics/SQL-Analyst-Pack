@@ -1,13 +1,13 @@
-# 🔧 Tools and Resources
+# Tools and Resources
 
 **Purpose:** Practical utilities, templates, and quick reference materials for business analysts  
 **Difficulty:** All Levels | **Prerequisites:** None | **Time:** As needed
 
 This directory contains ready-to-use SQL snippets, templates, and reference materials to accelerate your daily analytical work.
 
-## 📁 What's Included
+## What's Included
 
-### 📝 **SQL Snippets and Templates**
+### SQL Snippets and Templates
 
 - **01_common_sql_snippets.sql** - Comprehensive collection of 7 essential SQL patterns:
   1. **Top N Records Per Group** - Rankings and leaderboards
@@ -18,15 +18,17 @@ This directory contains ready-to-use SQL snippets, templates, and reference mate
   6. **Session Analytics** - User behavior and engagement patterns
   7. **Customer Lifetime Value** - Comprehensive customer value metrics
 
-### 🎯 **Business Use Cases**
+### Business Use Cases
+
 Each snippet is designed for common business analysis scenarios:
+
 - **Sales Rankings**: Top products, regions, or salespeople
 - **Financial Analysis**: Running totals, cumulative revenue
 - **Customer Analytics**: Lifetime value, session analysis, journey mapping
 - **Operational Reporting**: Time series analysis, trend identification
 - **Dashboard Development**: Pivot tables, summary metrics
 
-## � Quick Start
+## Quick Start Guide
 
 ### Using SQL Snippets
 
@@ -37,6 +39,7 @@ Each snippet is designed for common business analysis scenarios:
 5. Test the query in your environment
 
 Each snippet includes:
+
 - **Business use case** explanation
 - **Technical approach** and methodology  
 - **Real example** with sample data
@@ -44,6 +47,7 @@ Each snippet includes:
 - **Practical applications** for various industries
 
 ### Query Templates
+
 ```sql
 -- Example: Use the customer analysis template
 -- 1. Replace 'customers' with your table name
@@ -58,9 +62,10 @@ FROM customers
 GROUP BY customer_segment;
 ```
 
-## 📋 Featured Snippets
+## Featured SQL Snippets
 
 ### Top N Records
+
 ```sql
 -- Get top 10 customers by revenue
 SELECT customer_id, total_revenue
@@ -70,6 +75,7 @@ LIMIT 10;
 ```
 
 ### Running Totals
+
 ```sql
 -- Calculate running total of sales
 SELECT 
@@ -81,6 +87,7 @@ ORDER BY date;
 ```
 
 ### Pivot Data
+
 ```sql
 -- Convert rows to columns for reporting
 SELECT 
@@ -93,14 +100,14 @@ FROM quarterly_sales
 GROUP BY product_category;
 ```
 
-## 🎯 How to Contribute
+## How to Contribute
 
 1. **Add New Snippets**: Submit commonly used patterns
 2. **Improve Documentation**: Enhance explanations and examples
 3. **Test Code**: Ensure snippets work across different SQL dialects
 4. **Share Use Cases**: Provide real-world applications
 
-## � Learning Integration
+## Learning Integration
 
 These tools integrate with the main learning modules:
 
@@ -109,7 +116,7 @@ These tools integrate with the main learning modules:
 - **Advanced**: Leverage optimization tools for performance tuning
 - **Real World**: Use complete templates for project work
 
-## �️ Contributing New Snippets
+## Contributing New Snippets
 
 Have a useful pattern to share?
 
@@ -120,4 +127,4 @@ Have a useful pattern to share?
 
 ---
 
-**💡 Pro Tip:** These snippets are starting points - always adapt them to your specific business context and data structure!
+**Pro Tip:** These snippets are starting points—always adapt them to your specific business context and data structure!
