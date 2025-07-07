@@ -2,7 +2,7 @@
     File: 03_running_totals_and_moving_averages.sql
     Topic: Window Functions
     Task: Running Totals and Moving Averages
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL
 */

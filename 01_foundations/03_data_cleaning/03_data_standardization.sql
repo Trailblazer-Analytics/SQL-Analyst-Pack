@@ -2,7 +2,7 @@
     File: 03_data_standardization.sql
     Topic: Data Cleaning
     Task: Data Standardization
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL, with flavor-specific notes.
 */

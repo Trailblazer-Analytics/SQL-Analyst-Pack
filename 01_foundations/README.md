@@ -24,14 +24,14 @@ By completing this section, you will be able to:
 | [01_basic_queries](./01_basic_queries/) | SQL Fundamentals | ⭐ | 8 hours | SELECT, WHERE, ORDER BY, LIMIT |
 | [02_data_profiling](./02_data_profiling/) | Data Exploration | ⭐⭐ | 6 hours | Data types, NULL handling, distributions |
 | [03_data_cleaning](./03_data_cleaning/) | Data Quality | ⭐⭐ | 8 hours | Deduplication, standardization, validation |
-| [exercises](./exercises/) | Practice Problems | ⭐⭐ | 8 hours | Applied practice across all topics |
 
 ## 🗺️ Recommended Learning Path
 
 ### Week 1: SQL Fundamentals
-1. **Day 1-2**: Complete `01_basic_queries` - Learn SELECT statements
-2. **Day 3-4**: Practice filtering with WHERE clauses
-3. **Day 5-7**: Master table joins and relationships
+1. **Day 1**: Complete environment and Git setup from [Getting Started](../00_getting_started/)
+2. **Day 2-3**: Complete `01_basic_queries` - Learn SELECT statements
+3. **Day 4-5**: Practice filtering with WHERE clauses
+4. **Day 6-7**: Master table joins and relationships
 
 ### Week 2: Data Understanding  
 1. **Day 1-3**: Work through `02_data_profiling` 
@@ -43,14 +43,14 @@ By completing this section, you will be able to:
 2. **Day 4-5**: Practice duplicate detection and removal
 3. **Day 6-7**: Master data standardization techniques
 
-### Week 4: Applied Practice
+### Week 4: Applied Practice & Portfolio
 1. **Day 1-3**: Complete all foundation exercises
-2. **Day 4-5**: Work on capstone project
-3. **Day 6-7**: Review and prepare for intermediate level
+2. **Day 4-5**: Create your first analytical project with Git
+3. **Day 6-7**: Build portfolio and prepare for intermediate level
 
 ## 🏋️ Hands-On Exercises
 
-The `exercises/` directory contains practical problems that combine concepts from all modules:
+Each module in the foundations section contains its own `exercises/` directory with practical problems specific to that topic. This modular approach ensures focused practice aligned with learning objectives.
 
 - **Customer Analysis Project** - Explore customer demographics and behavior
 - **Sales Data Investigation** - Analyze transaction patterns and trends  
@@ -82,7 +82,7 @@ Ready for more advanced topics? Continue to:
 
 - **[02_intermediate](../02_intermediate/)** - Analytical functions and window operations
 - **[04_real_world](../04_real_world/)** - Skip ahead to see practical applications
-- **[tools_and_resources](../tools_and_resources/)** - Explore development tools and utilities
+- **[00_getting_started](../00_getting_started/)** - Essential setup and quick reference guides
 
 ## 💡 Study Tips
 

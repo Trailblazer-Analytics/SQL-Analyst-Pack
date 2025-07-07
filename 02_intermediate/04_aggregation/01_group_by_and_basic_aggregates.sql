@@ -2,7 +2,7 @@
     File: 01_group_by_and_basic_aggregates.sql
     Topic: Data Aggregation
     Task: GROUP BY and Basic Aggregate Functions
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL
 */

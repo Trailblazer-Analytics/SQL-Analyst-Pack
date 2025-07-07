@@ -238,7 +238,7 @@ WHERE state = 'active';
 ### Documentation Resources
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 - [SQL Tutorial Resources](../reference/learning_resources.md)
-- [VS Code SQL Setup Guide](../tools_and_resources/vscode_setup.md)
+- [VS Code SQL Setup Guide](./SETUP.md)
 
 ### Expert Help
 - **Office Hours:** Check schedule in main README

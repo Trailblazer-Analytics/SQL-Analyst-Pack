@@ -1,33 +1,52 @@
-# Setup Guide
+# 🛠️ Setup Guide: Git-Based SQL Learning Environment
 
-This guide provides instructions on how to set up the sample database for this project.
+**Time Required:** 15-20 minutes  
+**Goal:** Set up everything you need for Git-based SQL analysis learning
 
-## Using the Chinook Sample Database
+## 🎯 Quick Setup Checklist
 
-This project uses the Chinook sample database. The SQL script to create and populate this database is located in the `sample_database` directory.
+Before starting your SQL learning journey, you'll need:
 
-### Steps to Set Up the Database
+- [ ] **Git installed** (for version control workflow)
+- [ ] **Code editor** (VS Code recommended for SQL + Git integration)
+- [ ] **Database system** (SQLite recommended for simplicity)
+- [ ] **Sample data loaded** (business datasets for practice)
+- [ ] **First Git repository** (your forked learning repository)
 
-1. **Create a new database.** The name of the database can be `chinook`.
-2. **Run the script.** Execute the `sample_database/chinook.sql` script in the new database to create the tables and insert the data.
+## 🚀 Fast Track Setup (15 minutes)
 
-## Recommended Editor: Visual Studio Code
+### Step 1: Install Git (2 minutes)
+```bash
+# Windows: Download from https://git-scm.com/
+# macOS: git --version (will prompt install if needed)
+# Linux: sudo apt install git
 
-For an integrated and user-friendly experience, we strongly recommend using **Visual Studio Code (VS Code)**, a free and powerful code editor from Microsoft. It offers excellent SQL support and can be extended to manage databases directly within the editor, which is how this guide is structured.
-
-If you do not have it installed, you can [**download it for free here**](https://code.visualstudio.com/).
-
-### Database Setup in VS Code
-
-The following steps will guide you through setting up the database using a popular VS Code extension.
-
-For the best experience, we recommend using the [**SQLite**](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) extension for VS Code.
-
-```vscode-extensions
-alexcvzz.vscode-sqlite
+# Verify installation
+git --version
 ```
 
-**Instructions:**
+### Step 2: Install VS Code + SQL Extensions (5 minutes)
+
+1. **Download VS Code:** [code.visualstudio.com](https://code.visualstudio.com/)
+2. **Install SQL Extensions:**
+   - SQLite (by alexcvzz) - For database management
+   - Git Graph - For visualizing your learning progress
+   - SQL Formatter - For clean, readable queries
+
+### Step 3: Fork & Clone This Repository (3 minutes)
+```bash
+# 1. Fork this repository on GitHub (click Fork button)
+# 2. Clone YOUR fork
+git clone https://github.com/YOUR-USERNAME/SQL-Analyst-Pack.git
+cd SQL-Analyst-Pack
+
+# 3. Verify you're ready for Git-based learning
+git status
+```
+
+### Step 4: Set Up Sample Database (5 minutes)
+
+**Option A: SQLite (Recommended for beginners)**
 
 1. **Install the Extension**: Go to the Extensions view in VS Code (`Ctrl+Shift+X`) and search for `alexcvzz.vscode-sqlite`.
 2. **Open the Command Palette**: (`Ctrl+Shift+P`).

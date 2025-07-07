@@ -2,7 +2,7 @@
     File: 01_intro_to_text_analysis.sql
     Topic: Text Analysis
     Task: Introduction to Text Analysis and Basic String Functions
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL, with flavor-specific notes.
 */

@@ -147,7 +147,7 @@ All examples use the **Chinook** sample database with:
 ## 🚀 Next Steps
 
 After completing this module:
-1. Proceed to **09_database_administration** for system-level optimization
+1. Proceed to **09_business_reporting** for advanced dashboard optimization
 2. Explore **10_advanced_analytics** for analytical workload optimization
 3. Apply performance techniques across all previous modules
 

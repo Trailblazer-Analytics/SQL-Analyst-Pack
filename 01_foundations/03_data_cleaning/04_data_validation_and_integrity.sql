@@ -2,7 +2,7 @@
     File: 04_data_validation_and_integrity.sql
     Topic: Data Cleaning
     Task: Data Validation and Integrity
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL, with flavor-specific notes.
 */

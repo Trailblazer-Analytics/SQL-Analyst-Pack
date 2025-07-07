@@ -2,7 +2,7 @@
     File: 02_time_based_aggregations.sql
     Topic: Data Aggregation
     Task: Time-Based Aggregations
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL, with flavor-specific notes.
 */

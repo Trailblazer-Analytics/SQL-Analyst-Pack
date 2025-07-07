@@ -2,7 +2,7 @@
     File: 02_row_number_and_ranking.sql
     Topic: Window Functions
     Task: Ranking Functions - ROW_NUMBER, RANK, DENSE_RANK, NTILE
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL
 */

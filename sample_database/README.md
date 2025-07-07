@@ -45,8 +45,9 @@ psql sql_analyst_pack -f setup_postgresql.sql
 
 ### Option 2: SQLite (Portable)
 ```bash
-# Load into SQLite
-sqlite3 sql_analyst_pack.db < setup_sqlite.sql
+# SQLite setup - use the Chinook database directly
+# Download chinook.db from: https://github.com/lerocha/chinook-database/releases
+# Or use our SQL files to create your own SQLite database
 ```
 
 ### Option 3: Docker (Easiest)

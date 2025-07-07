@@ -2,7 +2,7 @@
     File: 04_lag_lead_and_value_comparisons.sql
     Topic: Window Functions
     Task: LAG, LEAD, and Value Comparisons
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL
 */

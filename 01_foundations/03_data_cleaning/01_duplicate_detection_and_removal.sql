@@ -2,7 +2,7 @@
     File: 01_duplicate_detection_and_removal.sql
     Topic: Data Cleaning
     Task: Duplicate Detection and Removal
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL, with flavor-specific notes.
 */

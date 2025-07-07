@@ -2,6 +2,23 @@
 
 ## 🚀 **Getting Started**
 
+### Q: Do I need a GitHub account to use this course?
+
+**A:** Yes! This is a Git-based learning course, so you need:
+
+1. **[GitHub account](https://github.com/join)** (free)
+2. **Fork this repository** to your account  
+3. **Clone your fork** to your computer
+
+**Why this is important:**
+
+- ✅ You can complete exercises and track your progress
+- ✅ Your work is backed up and version controlled
+- ✅ You can showcase your SQL skills to employers
+- ✅ You learn professional development workflows
+
+**⚠️ Please don't submit pull requests from the main repository - work in your fork!**
+
 ### Q: I'm completely new to SQL. Where should I start?
 
 **A:** Perfect! Start with our [Getting Started Guide](./00_getting_started/README.md) to set up your environment, then begin with [01_foundations](./01_foundations/). The learning path is designed to take you from complete beginner to advanced analyst.

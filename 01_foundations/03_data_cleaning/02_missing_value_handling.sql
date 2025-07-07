@@ -2,7 +2,7 @@
     File: 02_missing_value_handling.sql
     Topic: Data Cleaning
     Task: Handling Missing (NULL) Values
-    Author: GitHub Copilot
+    Author: SQL Analyst Pack Community
     Date: 2024-07-15
     SQL Flavor: ANSI SQL, with flavor-specific notes.
 */
